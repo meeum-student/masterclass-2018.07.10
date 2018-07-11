@@ -1,7 +1,6 @@
 /* ------------------------------------------------
 VARIABLES
 */
-
 :root {
   /* theme colors */
   --color-almost-white: #e8eef4;
@@ -51,21 +50,83 @@ VARIABLES
 /* ------------------------------------------------
 GLOBAL DEFAULTS
 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-default);
+  line-height: 1.4;
+  color: var(--main-text-color);
+  font-size: 18px;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
 
 /* ------------------------------------------------
 HEADINGS AND TYPE
 */
 
 /* ------------------------------------------------
-LAYOUT
+LAYOUTS
 */
+
+.layout-full-width,
+.layout-wide {
+  margin-bottom: var(--spacer-large);
+  padding: 0 var(--padder);
+
+  /* centering the divs*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout-full-width {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.layout-wide {
+  max-width: var(--area-wide);
+}
 
 /* ------------------------------------------------
 HEADER
 */
 
 header {
-  background-color: #4952a3;
+  background-color: var(--alternative-bg-color);
+  padding-top: var(--padder);
+}
+
+header .layout-wide {
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.logo-wrapper {
+  width: 20%;
+  float: left;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-site-title);
+  color: var(--alternative-text-color);
+  font-weight: bold;
+  width: 80%;
+  text-align: right;
+  float: right;
 }
 
 /* ------------------------------------------------
@@ -75,6 +136,10 @@ NAVIGATION
 /* ------------------------------------------------
 FOOTER
 */
+
+footer {
+  background-color: var(--alternative-bg-color);
+}
 
 /* ------------------------------------------------
 FORMS
